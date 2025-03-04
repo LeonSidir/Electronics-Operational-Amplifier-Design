@@ -1,0 +1,32 @@
+* source ERGASIA TELESTIKOU
+M_M3         N01165 N01165 N01276 N01276 pfet  
++ L=1u  
++ W=1u         
+M_M1         N01165 0 N01196 N01196 nfet  
++ L=3u  
++ W=9u         
+M_M4         N01192 N01165 N01276 N01276 pfet  
++ L=1u  
++ W=1u         
+M_M6         N01326 N01192 N01276 N01276 pfet  
++ L=1u  
++ W=13.5272u         
+M_M2         N01192 N01385 N01196 N01196 nfet  
++ L=3u  
++ W=9u         
+M_M8         N01214 N01214 N01250 N01250 nfet  
++ L=1u  
++ W=1u         
+M_M5         N01196 N01214 N01250 N01250 nfet  
++ L=1u  
++ W=1u         
+M_M7         N01326 N01214 N01250 N01250 nfet  
++ L=1u  
++ W=6.7571u         
+I_I5         N01276 N01214 DC 8.719128uAdc  
+V_Vdd         N01276 0 1.854Vdc
+V_Vss         0 N01250 1.854Vdc
+C_Cc         N01192 N01326  0.4796p  TC=0,0 
+C_CL         0 N01326  2.18p  TC=0,0 
+V_V1         N01385 0  
++PULSE 0 1 0 1n 1n 20u 40u

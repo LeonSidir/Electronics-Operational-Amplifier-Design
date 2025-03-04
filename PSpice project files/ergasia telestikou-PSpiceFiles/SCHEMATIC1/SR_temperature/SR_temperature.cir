@@ -1,0 +1,23 @@
+** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperature.sim ] 
+
+** Creating circuit file "SR_temperature.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ergasia telestikou-pspicefiles/ergasia telestikou.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Leonidas\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Users\Leonidas\Documents\Spice\MYLIBRARY2.lib" 
+.lib "C:\Users\Leonidas\Documents\Spice\MYLIBRARY.lib" 
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 2u 0 35n 
+.TEMP 0 20 40 60 80 100
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

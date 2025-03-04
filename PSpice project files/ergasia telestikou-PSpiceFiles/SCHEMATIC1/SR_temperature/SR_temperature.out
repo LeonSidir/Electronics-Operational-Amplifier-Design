@@ -1,0 +1,489 @@
+
+**** 01/17/22 23:27:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperatur
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "SR_temperature.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ergasia telestikou-pspicefiles/ergasia telestikou.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Leonidas\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Users\Leonidas\Documents\Spice\MYLIBRARY2.lib" 
+.lib "C:\Users\Leonidas\Documents\Spice\MYLIBRARY.lib" 
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 2u 0 35n 
+.TEMP 0 20 40 60 80 100
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ERGASIA TELESTIKOU
+M_M3         N01165 N01165 N01276 N01276 pfet  
++ L=1u  
++ W=1u         
+M_M1         N01165 0 N01196 N01196 nfet  
++ L=3u  
++ W=9u         
+M_M4         N01192 N01165 N01276 N01276 pfet  
++ L=1u  
++ W=1u         
+M_M6         N01326 N01192 N01276 N01276 pfet  
++ L=1u  
++ W=13.5272u         
+M_M2         N01192 N01385 N01196 N01196 nfet  
++ L=3u  
++ W=9u         
+M_M8         N01214 N01214 N01250 N01250 nfet  
++ L=1u  
++ W=1u         
+M_M5         N01196 N01214 N01250 N01250 nfet  
++ L=1u  
++ W=1u         
+M_M7         N01326 N01214 N01250 N01250 nfet  
++ L=1u  
++ W=6.7571u         
+I_I5         N01276 N01214 DC 8.719128uAdc  
+V_Vdd         N01276 0 1.854Vdc
+V_Vss         0 N01250 1.854Vdc
+C_Cc         N01192 N01326  0.4796p  TC=0,0 
+C_CL         0 N01326  2.18p  TC=0,0 
+V_V1         N01385 0  
++PULSE 0 1 0 1n 1n 20u 40u
+
+**** RESUMING SR_temperature.cir ****
+.END
+
+**** 01/17/22 23:27:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperatur
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               pfet            nfet            
+               PMOS            NMOS            
+       LEVEL    3               3            
+         TPG   -1                            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD   22.000000E-09  164.700000E-09 
+         VTO    -.9056           .786        
+          KP   29.352000E-06   96.379000E-06 
+       GAMMA     .4863           .5863       
+         PHI     .6              .6          
+      LAMBDA    0               0            
+         RSH  104.7            85.45         
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .85             .8          
+        PBSW     .85             .8          
+          CJ  484.470000E-06  385.410000E-06 
+        CJSW  164.570000E-12  139.400000E-12 
+          MJ     .5027          1.1854       
+        MJSW     .217168         .125195     
+        CGSO   53.752000E-12  402.410000E-12 
+        CGDO   53.752000E-12  402.410000E-12 
+        CGBO  336.500000E-12  361.440000E-12 
+        NSUB   18.900000E+15   16.160000E+15 
+         NFS    3.460000E+12    5.000000E+12 
+         TOX   21.200000E-09   21.200000E-09 
+          XJ  200.000000E-09  200.000000E-09 
+          UO  180.2           591.7          
+       UCRIT   10.000000E+03   10.000000E+03 
+        VMAX  373.200000E+03  208.200000E+03 
+       DELTA    1.52             .6967       
+       THETA     .1248           .08122      
+         ETA     .1641           .07066      
+       KAPPA    9.694            .1396       
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 01/17/22 23:27:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperatur
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =    0.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    pfet           nfet      
+
+        VTO       -9.575E-01      8.347E-01  
+        PHI        6.600E-01      6.600E-01  
+         PB        8.875E-01      8.420E-01  
+     IS(JS)        1.048E-16      1.048E-16  
+         KP        3.381E-05      1.110E-04  
+         UO        2.076E+02      6.816E+02  
+
+
+**** 01/17/22 23:27:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperatur
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =    0.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N01165)     .4345 (N01192)     .4345 (N01196)    -.9721 (N01214)    -.8132     
+
+(N01250)   -1.8540 (N01276)    1.8540 (N01326)    -.3026 (N01385)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -1.136E-04
+    V_Vss       -1.136E-04
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.21E-04  WATTS
+
+
+**** 01/17/22 23:27:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperatur
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   20.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    pfet           nfet      
+
+        VTO       -9.192E-01      7.988E-01  
+        PHI        6.157E-01      6.157E-01  
+         PB        8.598E-01      8.110E-01  
+     IS(JS)        3.319E-15      3.319E-15  
+         KP        3.041E-05      9.985E-05  
+         UO        1.867E+02      6.130E+02  
+
+
+**** 01/17/22 23:27:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperatur
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   20.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N01165)     .4351 (N01192)     .4351 (N01196)    -.9488 (N01214)    -.8235     
+
+(N01250)   -1.8540 (N01276)    1.8540 (N01326)    -.2909 (N01385)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -1.117E-04
+    V_Vss       -1.117E-04
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.14E-04  WATTS
+
+
+**** 01/17/22 23:27:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperatur
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   40.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    pfet           nfet      
+
+        VTO       -8.799E-01      7.619E-01  
+        PHI        5.707E-01      5.707E-01  
+         PB        8.316E-01      7.794E-01  
+     IS(JS)        6.824E-14      6.824E-14  
+         KP        2.754E-05      9.044E-05  
+         UO        1.691E+02      5.552E+02  
+
+
+**** 01/17/22 23:27:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperatur
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   40.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N01165)     .4366 (N01192)     .4366 (N01196)    -.9246 (N01214)    -.8347     
+
+(N01250)   -1.8540 (N01276)    1.8540 (N01326)    -.2782 (N01385)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -1.101E-04
+    V_Vss       -1.101E-04
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.08E-04  WATTS
+
+
+**** 01/17/22 23:27:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperatur
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   60.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    pfet           nfet      
+
+        VTO       -8.394E-01      7.240E-01  
+        PHI        5.252E-01      5.252E-01  
+         PB        8.027E-01      7.472E-01  
+     IS(JS)        9.843E-13      9.843E-13  
+         KP        2.510E-05      8.242E-05  
+         UO        1.541E+02      5.060E+02  
+
+
+**** 01/17/22 23:27:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperatur
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   60.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N01165)     .4388 (N01192)     .4388 (N01196)    -.8994 (N01214)    -.8468     
+
+(N01250)   -1.8540 (N01276)    1.8540 (N01326)    -.2645 (N01385)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -1.087E-04
+    V_Vss       -1.087E-04
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.03E-04  WATTS
+
+
+**** 01/17/22 23:27:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperatur
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   80.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    pfet           nfet      
+
+        VTO       -7.976E-01      6.848E-01  
+        PHI        4.792E-01      4.792E-01  
+         PB        7.733E-01      7.145E-01  
+     IS(JS)        1.057E-11      1.057E-11  
+         KP        2.300E-05      7.552E-05  
+         UO        1.412E+02      4.636E+02  
+
+
+**** 01/17/22 23:27:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperatur
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   80.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N01165)     .4417 (N01192)     .4417 (N01196)    -.8731 (N01214)    -.8599     
+
+(N01250)   -1.8540 (N01276)    1.8540 (N01326)    -.2501 (N01385)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -1.075E-04
+    V_Vss       -1.075E-04
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   3.99E-04  WATTS
+
+
+**** 01/17/22 23:27:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperatur
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =  100.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    pfet           nfet      
+
+        VTO       -7.546E-01      6.444E-01  
+        PHI        4.326E-01      4.326E-01  
+         PB        7.434E-01      6.813E-01  
+     IS(JS)        8.866E-11      8.866E-11  
+         KP        2.117E-05      6.953E-05  
+         UO        1.300E+02      4.269E+02  
+
+
+**** 01/17/22 23:27:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperatur
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =  100.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N01165)     .4453 (N01192)     .4453 (N01196)    -.8458 (N01214)    -.8740     
+
+(N01250)   -1.8540 (N01276)    1.8540 (N01326)    -.2348 (N01385)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -1.064E-04
+    V_Vss       -1.064E-04
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   3.95E-04  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 01/17/22 23:27:36 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-SR_temperature"  [ c:\users\leonidas\documents\spice\ergasia telestikou-PSpiceFiles\SCHEMATIC1\SR_temperatur
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

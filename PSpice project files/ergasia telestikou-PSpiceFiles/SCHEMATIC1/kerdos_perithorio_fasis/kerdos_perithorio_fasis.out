@@ -1,0 +1,177 @@
+
+**** 01/17/22 23:13:19 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-kerdos_perithorio_fasis"  [ c:\users\leonidas\documents\spice\ergasia telestikou-pspicefiles\schematic1\kerd
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "kerdos_perithorio_fasis.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ergasia telestikou-pspicefiles/ergasia telestikou.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Leonidas\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Users\Leonidas\Documents\Spice\MYLIBRARY2.lib" 
+.lib "C:\Users\Leonidas\Documents\Spice\MYLIBRARY.lib" 
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 500 100mHz 1GHz
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ERGASIA TELESTIKOU
+M_M3         N01165 N01165 N01276 N01276 pfet  
++ L=1u  
++ W=1u         
+M_M1         N01165 0 N01196 N01196 nfet  
++ L=3u  
++ W=9u         
+M_M4         N01192 N01165 N01276 N01276 pfet  
++ L=1u  
++ W=1u         
+M_M6         N01326 N01192 N01276 N01276 pfet  
++ L=1u  
++ W=13.5272u         
+M_M2         N01192 N01385 N01196 N01196 nfet  
++ L=3u  
++ W=9u         
+M_M8         N01214 N01214 N01250 N01250 nfet  
++ L=1u  
++ W=1u         
+M_M5         N01196 N01214 N01250 N01250 nfet  
++ L=1u  
++ W=1u         
+M_M7         N01326 N01214 N01250 N01250 nfet  
++ L=1u  
++ W=6.7571u         
+I_I5         N01276 N01214 DC 8.719128uAdc  
+V_Vdd         N01276 0 1.854Vdc
+V_Vss         0 N01250 1.854Vdc
+C_Cc         N01192 N01326  0.4796p  TC=0,0 
+C_CL         0 N01326  2.18p  TC=0,0 
+V_Vin         N01385 0 DC 0Vdc AC 0.1Vac 
+
+**** RESUMING kerdos_perithorio_fasis.cir ****
+.END
+
+**** 01/17/22 23:13:19 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-kerdos_perithorio_fasis"  [ c:\users\leonidas\documents\spice\ergasia telestikou-pspicefiles\schematic1\kerd
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               pfet            nfet            
+               PMOS            NMOS            
+       LEVEL    3               3            
+         TPG   -1                            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD   22.000000E-09  164.700000E-09 
+         VTO    -.9056           .786        
+          KP   29.352000E-06   96.379000E-06 
+       GAMMA     .4863           .5863       
+         PHI     .6              .6          
+      LAMBDA    0               0            
+         RSH  104.7            85.45         
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .85             .8          
+        PBSW     .85             .8          
+          CJ  484.470000E-06  385.410000E-06 
+        CJSW  164.570000E-12  139.400000E-12 
+          MJ     .5027          1.1854       
+        MJSW     .217168         .125195     
+        CGSO   53.752000E-12  402.410000E-12 
+        CGDO   53.752000E-12  402.410000E-12 
+        CGBO  336.500000E-12  361.440000E-12 
+        NSUB   18.900000E+15   16.160000E+15 
+         NFS    3.460000E+12    5.000000E+12 
+         TOX   21.200000E-09   21.200000E-09 
+          XJ  200.000000E-09  200.000000E-09 
+          UO  180.2           591.7          
+       UCRIT   10.000000E+03   10.000000E+03 
+        VMAX  373.200000E+03  208.200000E+03 
+       DELTA    1.52             .6967       
+       THETA     .1248           .08122      
+         ETA     .1641           .07066      
+       KAPPA    9.694            .1396       
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 01/17/22 23:13:19 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-kerdos_perithorio_fasis"  [ c:\users\leonidas\documents\spice\ergasia telestikou-pspicefiles\schematic1\kerd
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N01165)     .4355 (N01192)     .4355 (N01196)    -.9404 (N01214)    -.8273     
+
+(N01250)   -1.8540 (N01276)    1.8540 (N01326)    -.2866 (N01385)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -1.111E-04
+    V_Vss       -1.111E-04
+    V_Vin        0.000E+00
+
+    TOTAL POWER DISSIPATION   4.12E-04  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 01/17/22 23:13:19 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-kerdos_perithorio_fasis"  [ c:\users\leonidas\documents\spice\ergasia telestikou-pspicefiles\schematic1\kerd
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .11
+

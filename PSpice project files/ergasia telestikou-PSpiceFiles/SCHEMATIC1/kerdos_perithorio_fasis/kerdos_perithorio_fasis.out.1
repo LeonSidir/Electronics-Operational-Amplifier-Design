@@ -1,0 +1,72 @@
+
+**** 01/17/22 12:12:29 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-kerdos_perithorio_fasis"  [ c:\users\leonidas\documents\spice\ergasia telestikou-pspicefiles\schematic1\kerd
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "kerdos_perithorio_fasis.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ergasia telestikou-pspicefiles/ergasia telestikou.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Leonidas\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Users\Leonidas\Documents\Spice\MYLIBRARY2.lib" 
+.lib "C:\Users\Leonidas\Documents\Spice\MYLIBRARY.lib" 
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 500 0mHz 1GHz
+------------$
+ERROR(ORPSIM-16103): Invalid value
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ERGASIA TELESTIKOU
+M_M3         N01165 N01165 N01276 N01276 pfet  
++ L=1u  
++ W=1u         
+M_M1         N01165 0 N01196 N01196 nfet  
++ L=1u  
++ W=1u         
+M_M4         N01192 N01165 N01276 N01276 pfet  
++ L=1u  
++ W=1u         
+M_M6         N01326 N01192 N01276 N01276 pfet  
++ L=1u  
++ W=13.5272u         
+M_M2         N01192 N01385 N01196 N01196 nfet  
++ L=1u  
++ W=1u         
+M_M8         N01214 N01214 N01250 N01250 nfet  
++ L=1u  
++ W=1u         
+M_M5         N01196 N01214 N01250 N01250 nfet  
++ L=1u  
++ W=1u         
+M_M7         N01326 N01214 N01250 N01250 nfet  
++ L=1u  
++ W=6.7571u         
+I_I5         N01276 N01214 DC 8.719128uAdc  
+V_Vin         N01385 0 DC 0Vdc AC 0.1Vac 
+V_Vdd         N01276 0 1.854Vdc
+V_Vss         0 N01250 1.854Vdc
+C_Cc         N01192 N01326  0.4796p  TC=0,0 
+C_CL         0 N01326  2.18p  TC=0,0 
+
+**** RESUMING kerdos_perithorio_fasis.cir ****
+.END
+

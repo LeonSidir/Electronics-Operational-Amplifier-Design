@@ -1,0 +1,22 @@
+** Profile: "SCHEMATIC1-kerdos_perithorio_fasis"  [ c:\users\leonidas\documents\spice\ergasia telestikou-pspicefiles\schematic1\kerdos_perithorio_fasis.sim ] 
+
+** Creating circuit file "kerdos_perithorio_fasis.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ergasia telestikou-pspicefiles/ergasia telestikou.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Leonidas\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Users\Leonidas\Documents\Spice\MYLIBRARY2.lib" 
+.lib "C:\Users\Leonidas\Documents\Spice\MYLIBRARY.lib" 
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 500 100mHz 1GHz
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END
